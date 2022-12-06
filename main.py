@@ -22,6 +22,7 @@ def defence(char_name, char_class):
         return (f'{char_name} блокировал {10 + r(2, 5)} урона')
     return (f'{char_name} не заблокировал урон')
 
+
 def special(char_name, char_class):
     if char_class == 'warrior': 
         return (f'{char_name} применил специальное'
@@ -33,7 +34,6 @@ def special(char_name, char_class):
         return (f'{char_name} применил специальное'
                 f'умение «Защита {10 + 30}»')
     return (f'{char_name} не применил специальное умение')
-
 
 
 def start_training(char_name, char_class):
@@ -63,6 +63,7 @@ def start_training(char_name, char_class):
             print(special(char_name, char_class))
     return 'Тренировка окончена.'
 
+
 def choice_char_class():
     approve_choice = None
     char_class = None
@@ -81,8 +82,8 @@ def choice_char_class():
             print('Лекарь — могущественный заклинатель.'
                   'Черпает силы из природы, веры и духов.')
         approve_choice = input('Нажми (Y), чтобы подтвердить выбор, или'
-                               'любую другую кнопку, чтобы выбрать другого'
-                                'персонажа ') .lower()
+                               'любую другую кнопку, чтобы выбрать'
+                               'другого персонажа ') .lower()
     return char_class
 
 
@@ -96,5 +97,6 @@ def main():
     print('Воитель, Маг, Лекарь')
     char_class = choice_char_class()
     print(start_training(char_name, char_class))  
+
 
 main()
